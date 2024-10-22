@@ -38,14 +38,14 @@ header {
     object-fit: cover;
 }
 
-/* Secciones */
+/* Letras de logo */
 h1 {
     color: #11bee9;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 /* Secciones */
- h5 {
+h5 {
     color: #11bee9;
     font-size: 3em;
 }
@@ -60,15 +60,22 @@ nav ul {
     padding: 0;
 }
 
+nav ul li {
+    box-sizing: border-box; /* Ajusta el tamaño para incluir el borde */
+}
+
 nav ul li a {
     color: #11bee9;
     text-decoration: none;
-    padding: 20px 50px;
+    padding: 10px 20px; /* Ajusta el espacio interno */
+    border: 2px solid #11bee9; /* Añade borde */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
 }
 
 nav ul li a:hover {
-    background-color: white;
-    color: #1aa9d6;
+    background-color: #ffffff; /* Cambia el color de fondo al pasar el mouse */
+    color: #1aa9d6; /* Cambia el color del texto al pasar el mouse */
 }
 
 /* Sección de productos y categorías Alimentos */
@@ -103,6 +110,7 @@ section {
     padding: 10px;
 }
 
+/* ALIMIENTOS */
 .categoria h3 {
     color: #1aa9d6;
     font-size: 1.5em;
@@ -177,7 +185,6 @@ section {
     display: none; 
 }
 
-
 #productos-perros[style*="display: flex"],
 #productos-gatos[style*="display: flex"] {
     display: flex; 
@@ -191,7 +198,6 @@ footer {
     padding: 20px 0;
 }
 
-
 .justificado {
     text-align: justify;
 }
@@ -202,13 +208,27 @@ form {
     flex-direction: column;
     align-items: center; 
     gap: 10px; 
+    max-width: 500px;
+    margin: 20px auto; 
+    padding: 20px;
+    border: 2px solid #1aa9d6; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333; 
 }
 
 input[type="text"], input[type="email"] {
-    width: 300px; /* Ancho del campo */
-    padding: 10px; /* Espaciado interno */
+    width: 300px; 
+    padding: 10px; 
     border: 1px solid #1aa9d6;
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 5px; 
 }
 
 input[type="submit"] {
@@ -223,6 +243,22 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #11bee9; 
+}
+
+/* Botón para regresar */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1aa9d6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #11bee9;
 }
 
 /* Estilos Responsivos */
