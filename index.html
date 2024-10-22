@@ -11,7 +11,7 @@
             const productosPerros = document.getElementById('productos-perros');
             const productosGatos = document.getElementById('productos-gatos');
 
-            // Scrip-Oculta
+            // Oculta ambos
             productosPerros.style.display = 'none';
             productosGatos.style.display = 'none';
 
@@ -27,7 +27,7 @@
             const servicioPerros = document.getElementById('servicio-perros');
             const servicioGatos = document.getElementById('servicio-gatos');
 
-            // Oculta ambos servicios
+            // Oculta ambos
             servicioPerros.style.display = 'none';
             servicioGatos.style.display = 'none';
 
@@ -64,7 +64,6 @@
         <img src="Banner.png" alt="Banner Tienda Veterinaria">
     </div>
 
-    <!-- Secciones -->
     <section id="productos">
         <h2>Productos</h2>
         <div class="categorias-productos">
@@ -75,207 +74,202 @@
                 </a>
             </div>
 
-        <!--Alimentos -->
-        <div id="alimentos" class="subcategorias">
-          
-            <div class="subcategorias-alimentos">
+            <!-- Alimentos -->
+            <div id="alimentos" class="subcategorias">
+                <div class="subcategorias-alimentos">
+                    <div class="subcategoria">
+                        <a href="#productos-perros" onclick="toggleSubcategoria('perros')">
+                            <img src="Perros.png" alt="Perros">
+                            <h4>Perros</h4>
+                        </a>
+                    </div>
+                    <div class="subcategoria">
+                        <a href="#productos-gatos" onclick="toggleSubcategoria('gatos')">
+                            <img src="Gatos.png" alt="Gatos">
+                            <h4>Gatos</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos para Perros -->
+            <div id="productos-perros" class="productos" style="display: none;">
+                <h3>Productos para Perros</h3>
+                <div class="productos-lista">
+                    <div class="producto">
+                        <img src="AlimentoC1.jfif" alt="Alimento 1">
+                        <p>Hills para perro Adulto OB 33 Lb: $507.600</p>
+                    </div>
+                    <div class="producto">
+                        <img src="AlimentoC2.jpg" alt="Alimento 2">
+                        <p>Hills Science Diet Perros Adultos. Precio: $86.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="AliementoC3.jpg" alt="Alimento 3">
+                        <p>Agility Gold Perros Cachorros Razas Grandes Sin Granos 15 Kg. Precio: $45.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="AlimentoC4.jpg" alt="Alimento 4">
+                        <p>Comida para Cachorros. Precio: $30.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="AlimentosC5.jpg" alt="Alimentos5">
+                        <p>Max Professional Line Perros Adultos Razas Pequeñas Pollo y Arroz 8 Kg: $158.300</p>
+                    </div>
+                    <div class="producto">
+                        <img src="AlimentoC7.jpg" alt="Alimentos7">
+                        <p>Max Professional Line Perros Adultos Razas Pequeñas Pollo y Arroz 8 Kg: $158.300</p>
+                    </div>
+                    <div class="producto">
+                        <img src="AlimentoC8.jpg" alt="Alimentos8">
+                        <p>Hills Prescription Diet Perros Urinary Care Cálculos Urinarios c/d 8.5 Lb: $222.300</p>
+                    </div>
+                    <div class="producto">
+                        <img src="AlimentoC9.jpg" alt="Alimentos9">
+                        <p>Diamond Naturals Perros Adultos Cordero y Arroz 40 Lb: $338.900</p>
+                    </div>
+                    <div class="producto">
+                        <img src="AlimentoC10.jpg" alt="Alimentos 10">
+                        <p>Chunky Perros Adultos Cordero, Arroz y Salmón 12 Kg: $146.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="AlimentoC11.jpg" alt="Alimentos 11">
+                        <p>Nutra-Nuggets Perros Adultos Pollo y Arroz 15 Kg: $238.000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos para Gatos -->
+            <div id="productos-gatos" class="productos" style="display: none;">
+                <h3>Productos para Gatos</h3>
+                <div class="productos-lista">
+                    <div class="producto">
+                        <img src="Algatos1.jpg" alt="1">
+                        <p>Max Cat gatos adultos pollo y arroz 10.1 Kg Precio: $199.800</p>
+                    </div>
+                    <div class="producto">
+                        <img src="Algatos2.jpg" alt="2">
+                        <p>Agility Gold Gatos Sin Granos 7 Kg Precio: $154.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="Algatos3.jpg" alt="3">
+                        <p>Hills Prescription Diet Gatos Urinary Care c/d Cálculos Urinarios 4 Lb. Precio: $156.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="Algatos4.jpg" alt="4">
+                        <p>Diamond Naturals Gatos Indoor Pollo y Arroz 18 Lb. Precio: $249.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="Algato5.jpg" alt="5">
+                        <p>Monello cat salmón, atún y pollo 7 KG. Precio: $142.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="Algato6.jpg" alt="6">
+                        <p>Nutra-Nuggets Fórmula de Mantenimiento para Gatos 7.5 Kg. Precio: $171.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="Algato7.jpg" alt="7">
+                        <p>Hills Science Diet Gatos Adultos Optimal Care 7 Lb. Precio: $193.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="Algato8.jpg" alt="8">
+                        <p>Cat Chow Gatos Adultos Hogareños 8 Kg. Precio: $120.000</p>
+                    </div>
+                    <div class="producto">
+                        <img src="Algato9.jpg" alt="9">
+                        <p>Royal Canin Hepatic Gatos VDF 2Kg. Precio: $188.200</p>
+                    </div>
+                    <div class="producto">
+                        <img src="Algato10.jpg" alt="10">
+                        <p>Equilíbrio Concentrado Gatos Adultos Salmón 1.5 Kg. Precio: $80.000</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Botón para regresar al inicio -->
+            <button class="btn-regresar" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Regresar al Inicio</button>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <div class="subcategorias-servicios">
                 <div class="subcategoria">
-                    <a href="#productos-perros" onclick="toggleSubcategoria('perros')">
-                        <img src="Perros.png" alt="Perros">
-                        <h4>Perros</h4>
+                    <a href="#servicio-perros" onclick="toggleServicio('perros')">
+                        <img src="Perros.png" alt="Perros" class="servicio-imagen">
+                        <h4>Servicios para Perros</h4>
                     </a>
                 </div>
                 <div class="subcategoria">
-                    <a href="#productos-gatos" onclick="toggleSubcategoria('gatos')">
-                        <img src="Gatos.png" alt="Gatos">
-                        <h4>Gatos</h4>
+                    <a href="#servicio-gatos" onclick="toggleServicio('gatos')">
+                        <img src="Gatos.png" alt="Gatos" class="servicio-imagen">
+                        <h4>Servicios para Gatos</h4>
                     </a>
                 </div>
             </div>
-        </div>
 
-        <!--Productos para Perros -->
-<div id="productos-perros" class="productos" style="display: none;">
-    <h3>Productos para Perros</h3>
-    <div class="productos-lista">
-        <div class="producto">
-            <img src="AlimentoC1.jfif" alt="Alimento 1">
-            <p>Hills para perro Adulto OB 33 Lb: $507.600</p>
-        </div>
-        <div class="producto">
-            <img src="AlimentoC2.jpg" alt="Alimento 2">
-            <p>Hills Science Diet Perros Adultos. Precio: $86.000</p>
-        </div>
-        <div class="producto">
-            <img src="AliementoC3.jpg" alt="Alimento 3">
-            <p>Agility Gold Perros Cachorros Razas Grandes Sin Granos 15 Kg. Precio: $45.000</p>
-        </div>
-        <div class="producto">
-            <img src="AlimentoC4.jpg" alt="Alimento 4">
-            <p>Comida para Cachorros. Precio: $30.000</p>
-        </div>
-        <div class="producto">
-            <img src="AlimentosC5.jpg" alt="Alimentos5">
-            <p>Max Professional Line Perros Adultos Razas Pequeñas Pollo y Arroz 8 Kg: $158.300</p>
-        </div>
-        <div class="producto">
-            <img src="AlimentoC7.jpg" alt="Alimentos7">
-            <p>Max Professional Line Perros Adultos Razas Pequeñas Pollo y Arroz 8 Kg: $158.300</p>
-        </div>
-        <div class="producto">
-            <img src="AlimentoC8.jpg" alt="Alimentos8">
-            <p>Hills Prescription Diet Perros Urinary Care Cálculos Urinarios c/d 8.5 Lb: $222.300</p>
-        </div>
-        <div class="producto">
-            <img src="AlimentoC9.jpg" alt="Alimentos9">
-            <p>Diamond Naturals Perros Adultos Cordero y Arroz 40 Lb: $338.900</p>
-        </div>
-        <div class="producto">
-            <img src="AlimentoC10.jpg" alt="Alimentos 10">
-            <p>Chunky Perros Adultos Cordero, Arroz y Salmón 12 Kg: $146.000</p>
-        </div>
-        <div class="producto">
-            <img src="AlimentoC11.jpg" alt="Alimentos 11">
-            <p>Nutra-Nuggets Perros Adultos Pollo y Arroz 15 Kg: $238.000</p>
-        </div>
-    </div>
-</div>
-
-        <!-- Productos para Gatos -->
-<div id="productos-gatos" class="productos" style="display: none;">
-    <h3>Productos para Gatos</h3>
-    <div class="productos-lista">
-        <div class="producto">
-            <img src="Algatos1.jpg" alt="1">
-            <p>Max Cat gatos adultos pollo y arroz 10.1 Kg Precio: $199.800</p>
-        </div>
-        <div class="producto">
-            <img src="Algatos2.jpg" alt="2">
-            <p>Agility Gold Gatos Sin Granos 7 Kg Precio: $154.000</p>
-        </div>
-        <div class="producto">
-            <img src="Algatos3.jpg" alt="3">
-            <p>Hills Prescription Diet Gatos Urinary Care c/d Cálculos Urinarios 4 Lb. Precio: $156.000</p>
-        </div>
-        <div class="producto">
-            <img src="Algatos4.jpg" alt="4">
-            <p>Diamond Naturals Gatos Indoor Pollo y Arroz 18 Lb. Precio: $249.000</p>
-        </div>
-        <div class="producto">
-            <img src="Algato5.jpg" alt="5">
-            <p>Monello cat salmón, atún y pollo 7 KG. Precio: $142.000</p>
-        </div>
-
-        <div class="producto">
-            <img src="Algato6.jpg" alt="6">
-            <p>Nutra-Nuggets Fórmula de Mantenimiento para Gatos 7.5 Kg. Precio: $171.000</p>
-        </div>
-        <div class="producto">
-            <img src="Algato7.jpg" alt="7">
-            <p>Hills Science Diet Gatos Adultos Optimal Care 7 Lb. Precio: $193.000</p>
-        </div>
-        <div class="producto">
-            <img src="Algato8.jpg" alt="8">
-            <p>Cat Chow Gatos Adultos Hogareños 8 Kg. Precio: $120.000</p>
-        </div>
-        <div class="producto">
-            <img src="Algato9.jpg" alt="9">
-            <p>Royal Canin Hepatic Gatos VDF 2Kg. Precio: $188.200</p>
-        </div>
-        <div class="producto">
-            <img src="Algato10.jpg" alt="10">
-            <p>Equilíbrio Concentrado Gatos Adultos Salmón 1.5 Kg. Precio: $80.000</p>
-        </div>
-    </div>
-</div>
-<!-- Boton de scroll -->
-<!-- Botón para regresar al inicio -->
-<button class="btn-regresar" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Regresar al Inicio</button>
-    </section>
-
-    <!-- Sección de Servicios -->
-    <section id="servicios">
-        <h2>Servicios</h2>
-        <div class="subcategorias-servicios">
-            <div class="subcategoria">
-                <a href="#servicio-perros" onclick="toggleServicio('perros')">
-                    <img src="Perros.png" alt="Perros" style="width: 300px; height: 300px;">
-                    <h4>Servicios para Perros</h4>
-                </a>
+            <!-- Servicios para Perros -->
+            <div id="servicio-perros" class="productos" style="display: none;">
+                <h5>Baño y Corte</h5>
+                <p>Baño y corte de perros razas pequeñas : $25.000</p>
+                <p>Baño y corte de perros razas medianas : $45.000</p>
+                <p>Baño y corte de perros razas grandes : $75.000</p>
+                <h5>Vacunación</h5>
+                <p>Vacunacion en clínica. Precio: $25.000</p>
+                <p>Vacunacion a domicilio. Precio: $45.000</p>
             </div>
-            <div class="subcategoria">
-                <a href="#servicio-gatos" onclick="toggleServicio('gatos')">
-                    <img src="Gatos.png" alt="Gatos" style="width: 300px; height: 300px;">
-                    <h4>Servicios para Gatos</h4>
-                </a>
+
+            <!-- Servicios para Gatos -->
+            <div id="servicio-gatos" class="productos" style="display: none;">
+                <h5>Baño</h5>
+                <p>Bañado y Secado en Gatos. Precio: $35.000</p>
+                <h5>Vacunación</h5>
+                <p>Vacunacion en clínica. Precio: $25.000</p>
+                <p>Vacunacion a domicilio. Precio: $45.000</p>
             </div>
-        </div>
+        </section>
 
-        <!-- Servicios para Perros -->
-        <div id="servicio-perros" class="productos" style="display: none;">
-            <h5>Baño y Corte</h5>
-            <p>Baño y corte de perros razas pequeñas : $25.000</p>
-            <p>Baño y corte de perros razas medianas : $45.000</p>
-            <p>Baño y corte de perros razas grandes : $75.000</p>
-            <h5>Vacunación</h5>
-            <p>Vacunacion en clinica.  Precio: $25.000</p>
-            <p>Vacunacion a domicilio.  Precio: $45.000</p>
-        </div>
+        <section id="quienes-somos">
+            <h2>Quiénes Somos</h2>
+            <img src="Quienessomos.png" alt="Nosotros" class="quienes-somos-imagen">
+            <div class="caja-texto">
+                <p class="justificado">
+                    Hace cinco años, en un pequeño rincón lleno de amor y dedicación, nació B&V Pets. No éramos solo una tienda veterinaria; éramos el resultado del sueño de una persona apasionada por el bienestar familiar, donde los miembros más peludos siempre han sido parte esencial.
+                    Desde nuestros inicios, nos hemos dedicado a cuidar y proteger a tus compañeros de cuatro patas con el mismo cariño y atención que les das en casa. Sabemos que una mascota no es solo un animal, sino un amigo, un confidente y un miembro más de la familia.
+                    En B&V Pets, cada baño es una experiencia de relajación, y cada vacuna es un paso hacia una vida más saludable. Estamos aquí para asegurarnos de que esos momentos de cuidado se conviertan en recuerdos felices, porque para nosotros, proteger a tus peludos es una misión que llevamos con el corazón.
+                </p>
+            </div>
+        </section>
 
-        <!-- Servicios para Gatos -->
-        <div id="servicio-gatos" class="productos" style="display: none;">
-            <h5>Baño</h5>
-            <p>Bañado y Secado en Gatos. Precio: $35.000</p>
-            <h5>Vacunación</h5>
-            <p>Vacunacion en clinica.  Precio: $25.000</p>
-            <p>Vacunacion a domicilio.  Precio: $45.000</p>
-        </div>
-    </section>
+        <!-- Sección Blog -->
+        <section id="blog">
+            <h2>Blog</h2>
+            <div class="caja-texto">
+                <p class="justificado">Bienvenido a nuestro blog, donde compartimos consejos y trucos para el cuidado de tus mascotas.</p>
+                <p class="justificado">Mascotas en casa y 10 consejos infalibles para cuidarlas correctamente. 
+                    Llevar una nueva mascota al hogar puede ser tan intimidante como emocionante. 
+                    Incluso si anteriormente tuviste algún peludito en casa, esta decisión puede dar lugar a muchas preguntas. 
+                    Sin embargo, estamos seguros de que los siguientes consejos te ayudarán.
+                </p>
+            </div>
+        </section>
 
+        <!-- Sección de Contacto -->
+        <section id="contacto">
+            <h2>Contáctenos</h2>
+            <p>Llámanos al 311.... y pregunta por Angie Ramírez; con gusto te atenderemos.</p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="celular">Celular:</label>
+                <input type="text" id="celular" name="celular" required>
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <input type="submit" value="Enviar" class="btn-enviar">
+            </form>
+        </section>
 
-    <section id="quienes-somos">
-        <h2>Quiénes Somos</h2>
-        <img src="Quienessomos.png" alt="Nosotros" style="width: 300px;">
-        <div class="caja-texto">
-            <p class="justificado">
-                Hace cinco años, en un pequeño rincón lleno de amor y dedicación, nació B&V Pets. No éramos solo una tienda veterinaria; éramos el resultado del sueño de una persona apasionada por el bienestar familiar, donde los miembros más peludos siempre han sido parte esencial.
-                Desde nuestros inicios, nos hemos dedicado a cuidar y proteger a tus compañeros de cuatro patas con el mismo cariño y atención que les das en casa. Sabemos que una mascota no es solo un animal, sino un amigo, un confidente y un miembro más de la familia.
-                En B&V Pets, cada baño es una experiencia de relajación, y cada vacuna es un paso hacia una vida más saludable. Estamos aquí para asegurarnos de que esos momentos de cuidado se conviertan en recuerdos felices, porque para nosotros, proteger a tus peludos es una misión que llevamos con el corazón.
-            </p>
-        </div>
-    </section>
-
-    <!-- Seccion Blog -->
-    <section id="blog">
-        <h2>Blog</h2>
-        <div class="caja-texto">
-            <p class="justificado">Bienvenido a nuestro blog, donde compartimos consejos y trucos para el cuidado de tus mascotas.</p>
-            <p class="justificado">Mascotas en casa y 10 consejos infalibles para cuidarlas correctamente. 
-                Llevar una nueva mascota al hogar puede ser tan intimidante como emocionante. 
-                Incluso si anteriormente tuviste algún peludito en casa, esta decisión puede dar lugar a muchas preguntas. 
-                Sin embargo, estamos seguros de que los siguientes consejos te ayudarán.
-            </p>
-        </div>
-    </section>
-
-    <!-- Seccion de Contacto -->
-    <section id="contacto">
-        <h2>Contáctenos</h2>
-        <p>Llamanos al 311.... y pregunta por Angie Ramirez con gusto te atenderemos.</p>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="celular">Celular:</label>
-            <input type="text" id="celular" name="celular" required>
-            <label for="correo">Correo Electrónico:</label>
-            <input type="email" id="correo" name="correo" required>
-            <input type="submit" value="Enviar" class="btn-enviar">
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; Diseño de Angie Ramirez para B&V Pets. Todos los derechos reservados.</p>
-    </footer>
-    
+        <footer>
+            <p>&copy; Diseño de Angie Ramírez para B&V Pets. Todos los derechos reservados.</p>
+        </footer>
 </body>
 </html>
