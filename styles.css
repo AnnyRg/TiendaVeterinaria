@@ -6,7 +6,7 @@ body {
     background-color: #ffffff;
     color: #1aa9d6;
     margin: 0;
-    padding: 0;
+    padding: 20;
     width: 100%;
     overflow-x: hidden; /* Para evitar el scroll horizontal */
 }
@@ -14,9 +14,10 @@ body {
 /* Estilos del encabezado */
 header {
     display: flex;
+    justify-content:baseline;
     align-items: center;
     background-color: #ffffff;
-    padding: 10px;
+    padding: 5px;
 }
 
 .logo img {
@@ -71,12 +72,11 @@ nav ul {
     width: 100%;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
 }
 
 nav ul li {
     box-sizing: border-box; /* Ajusta el tamaño para incluir el borde */
-    margin: 0 15px; /* Espaciado entre los botones del menú */
+    margin: 0 15px; /* Aumenta el espaciado entre los botones del menú */
 }
 
 nav ul li a {
@@ -116,10 +116,10 @@ section {
     transform: scale(1.1); 
 }
 
-/* Img Alimentos */
+/* Img Alimentos, Ropa y Baño */
 .categoria img {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%; 
     background-color: #1aa9d6;
     padding: 10px;
@@ -217,80 +217,97 @@ footer {
     text-align: justify;
 }
 
-/* Estilo general del formulario */
+/* Estilos del formulario */
 form {
     display: flex;
     flex-direction: column;
-    max-width: 600px; /* Ancho máximo del formulario */
-    margin: 20px auto; /* Centrar el formulario */
-    padding: 20px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde sutil */
-    border-radius: 8px; /* Bordes redondeados */
-    background-color: #f9f9f9; /* Fondo claro */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    align-items: center; 
+    gap: 10px; 
+    max-width: 500px;
+    margin: 20px auto; 
+    padding: 20px;
+    border: 2px solid #1aa9d6; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9;
 }
 
-/* Estilo de etiquetas */
-label {
-    margin-bottom: 5px; /* Espacio debajo de las etiquetas */
-    font-weight: bold; /* Negrita para las etiquetas */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333; 
 }
 
-/* Estilo de los inputs */
-input[type="text"],
-input[type="email"] {
-    padding: 10px; /* Espaciado interno */
-    margin-bottom: 15px; /* Espacio entre campos */
-    border: 1px solid #ccc; /* Borde sutil */
-    border-radius: 4px; /* Bordes redondeados */
-    transition: border-color 0.3s; /* Transición para el borde */
+input[type="text"], input[type="email"] {
+    width: 300px; 
+    padding: 10px; 
+    border: 1px solid #1aa9d6;
+    border-radius: 5px; 
 }
 
-/* Cambios al enfocar el input */
-input[type="text"]:focus,
-input[type="email"]:focus {
-    border-color: #007BFF; /* Cambiar el color del borde al enfocar */
-    outline: none; /* Quitar el contorno */
+input[type="submit"] {
+    background-color: #1aa9d6; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
 }
 
-/* Estilo del botón de enviar */
-.btn-enviar {
-    background-color: #007BFF; /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 10px 15px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
-    font-size: 16px; /* Tamaño del texto */
-    transition: background-color 0.3s; /* Transición para el fondo */
+input[type="submit"]:hover {
+    background-color: #11bee9; 
 }
 
-/* Cambios al pasar el ratón sobre el botón */
-.btn-enviar:hover {
-    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambiar a columna para mejor visualización */
+        align-items: stretch; /* Centrar los elementos */
+        padding: 0; /* Eliminar padding */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Reducir margen entre los elementos de la navegación */
+    }
+
+    nav ul li a {
+        padding: 8px 16px; /* Ajustar padding para que sean más pequeños */
+        font-size: 1em; /* Cambiar tamaño de fuente */
+    }
+
+    .categorias-productos {
+        flex-direction: column; /* Cambiar a columna para que se vean mejor en móvil */
+        align-items: center; /* Centrar elementos */
+    }
+
+    .categoria img {
+        width: 100px; /* Tamaño más pequeño para imágenes de categorías */
+        height: 100px;
+    }
+
+    .subcategorias-alimentos, .subcategorias-servicios {
+        flex-direction: column; /* Cambiar a columna */
+        align-items: center; /* Centrar elementos */
+    }
+
+    .producto {
+        width: 90%; /* Ajustar ancho para que no sobresalgan en móviles */
+        max-width: 300px; /* Ancho máximo */
+    }
+
+    /* Formularios */
+    form {
+        width: 90%; /* Hacer que el formulario sea más pequeño en móviles */
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 100%; /* Ajustar al 100% del contenedor */
+    }
 }
 
-/* Estilo para el mensaje de estado */
-.message {
-    margin-top: 15px; /* Espacio arriba del mensaje */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 4px; /* Bordes redondeados */
-    font-size: 14px; /* Tamaño del texto */
-}
-
-/* Estilo para mensajes de éxito */
-.message.success {
-    color: #28a745; /* Color verde */
-    border: 1px solid #28a745; /* Borde verde */
-}
-
-/* Estilo para mensajes de error */
-.message.error {
-    color: #dc3545; /* Color rojo */
-    border: 1px solid #dc3545; /* Borde rojo */
-}
-
-/* Botón para regresar al inicio */
+/* Estilos del botón para regresar al inicio */
 .btn-regresar {
     position: fixed;
     bottom: 20px;
@@ -309,51 +326,4 @@ input[type="email"]:focus {
 
 .btn-regresar:hover {
     background-color: #11bee9; /* Cambio de color al pasar el mouse */
-}
-
-/* Estilos Responsivos */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Apilar los botones en móviles */
-        text-align: center;
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Espacio entre botones en móviles */
-    }
-
-    .categorias-productos {
-        flex-direction: column;
-    }
-
-    .categoria img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .subcategorias-alimentos, .subcategorias-servicios {
-        flex-direction: column;
-    }
-
-    .productos {
-        flex-direction: column;
-    }
-
-    .producto {
-        width: 100%;
-    }
-
-    .caja-texto {
-        padding: 15px; /* Ajustar el padding para móviles */
-        margin: 5px; /* Espacio reducido */
-    }
-
-    input[type="text"], input[type="email"] {
-        width: 90%; /* Ancho ajustado para móviles */
-    }
-
-    .btn-regresar {
-        bottom: 10px; /* Ajustar la posición en móviles */
-        right: 10px; /* Ajustar la posición en móviles */
-    }
 }
